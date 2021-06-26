@@ -1,0 +1,20 @@
+{
+  "name": "system/app",
+  "description": "App",
+  "authors": [
+    {
+      "name": "Angelo Trujillo Orozco",
+      "email": "angelotrujillo210200@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Application\\": "app/"
+    }
+  },
+  "require": {
+    "mpdf/mpdf": "^8.0",
+    "phpmailer/phpmailer": "^6.1"
+  }
+}

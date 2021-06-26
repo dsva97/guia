@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(img/fondos/fondo-mimpv.png) no-repeat center top;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+body:before{content:"";display:block;position:absolute;z-index:-1;width:100%;height:100%;top:0;left:0;background-color:rgba(255, 255, 255, 0.678)}
+
+.login-box{
+width: 450px;
+height: 450px;
+background: #EB1C24;
+top: 50%;
+left: 50%;
+position: absolute;
+transform: translate(-50%, -50%);
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.logo{
+height: 70px;
+position: relative;
+padding: 0 0 10px;
+}
+
+.login-box h1{
+    text-align: center;
+    font-size: 35px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box input:focus, .login-box input:valid{
+    background: none;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: none;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.login-box ::placeholder{
+    color: #fff;
+    opacity: 5;
+}
+.login-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #58595B;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;    
+}
+.login-box input[type="submit"]:hover{
+    background: #000;
+    font-size: 18px;
+}

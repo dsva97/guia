@@ -1,0 +1,33 @@
+version: "3"
+services:
+  db:
+    container_name: guia_db
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    networks:
+      - guia_network
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=login_2019
+    volumes:
+      - "guia_volume_db:/var/lib/mysql"
+  php:
+    container_name: guia_php
+    build: .
+    depends_on:
+      - db
+    networks:
+      - guia_network
+    volumes:
+      - "./app:/var/www/html"
+    ports:
+      - "8080:80"
+volumes:
+  guia_volume_db:
+
+networks:
+  guia_network:
+    driver: bridge
